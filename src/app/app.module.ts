@@ -14,6 +14,7 @@ import { UploadComponent } from './modules/upload/upload.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { VideoComponent } from './modules/video/video.component';
+import { CameraComponent } from './modules/camera/camera.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { VideoComponent } from './modules/video/video.component';
     AppComponent,
     MatNavComponent,
     UploadComponent,
-    VideoComponent
+    VideoComponent,
+    CameraComponent
   ],
   imports: [
     BrowserModule,

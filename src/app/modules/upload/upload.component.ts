@@ -22,6 +22,7 @@ export class UploadComponent implements OnInit {
   ) {}
  
   public dropped(event: UploadEvent) {
+    console.log(event.files)
     this.files = event.files;
     this.dataSource = new MatTableDataSource(this.files)
     for (const droppedFile of event.files) {
