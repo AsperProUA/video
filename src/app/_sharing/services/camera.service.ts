@@ -1,29 +1,26 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import * as global from '../global';
+import { Video } from '../models';
+import { Observable } from 'rxjs';
 import * as RecordRTC from 'node_modules/recordrtc'
 
 
-
-@Component({
-  selector: 'app-camera',
-  templateUrl: './camera.component.html',
-  styleUrls: ['./camera.component.scss']
+@Injectable({
+  providedIn: 'root'
 })
-export class CameraComponent implements AfterViewInit {
 
+export class CameraService {
+  
+  private _apiUrl = `${global._api}${global._video}`
   private stream: MediaStream;
   private recordRTC: any;
+  private video
 
-  @ViewChild('video') video;
-
-  constructor() { }
-
-  ngAfterViewInit() {
-    
-    let video:HTMLVideoElement = this.video.nativeElement;
-    video.muted = false;
-    video.controls = false;
-    video.autoplay = false;
-  }
+  constructor(
+    private _http: HttpClient
+  ) {}
+  
 
   toggleControls() {
     let video: HTMLVideoElement = this.video.nativeElement;
@@ -78,5 +75,5 @@ export class CameraComponent implements AfterViewInit {
   download() {
     this.recordRTC.save(`video_${new Date().getTime()}.webm`);
   }
-
+  
 }
