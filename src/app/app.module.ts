@@ -14,7 +14,6 @@ import { UploadComponent } from './modules/upload/upload.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { VideoComponent } from './modules/video/video.component';
-import { CameraComponent } from './modules/camera/camera.component';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { CameraComponent } from './modules/camera/camera.component';
     AppComponent,
     MatNavComponent,
     UploadComponent,
-    VideoComponent,
-    CameraComponent
+    VideoComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +33,7 @@ import { CameraComponent } from './modules/camera/camera.component';
     FormsModule,
     FileDropModule
   ],
-  entryComponents: [MatNavComponent, UploadComponent],
+  entryComponents: [UploadComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
