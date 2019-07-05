@@ -1,0 +1,40 @@
+.upload { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload > input {
+  margin: 24px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn{
+  margin: 24px;
+}
+
+.ngx-file-drop__drop-zone {
+  width: 280px;
+}
+
+.btn-upload {
+  width: 160px;
+  height: 160px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+video {
+  width: 300px;
+  margin-bottom: 12px;
+}

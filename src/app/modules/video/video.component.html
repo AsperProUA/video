@@ -1,0 +1,17 @@
+<div class="grid__video">
+  <mat-card *ngFor="let video of videos" class="card">
+    <mat-card-header>
+      <mat-card-title>{{video.title}}</mat-card-title>
+      <mat-card-subtitle>{{video.created_at | date: 'medium'}}</mat-card-subtitle>
+    </mat-card-header>
+    <video width="310" height="240">
+      <source src="http://localhost:3000/{{video.video}}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <mat-card-content>
+      <p>
+        {{video.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

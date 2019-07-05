@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~normalize.css/normalize.css";
+
+@import "./app/modules/mat-nav/mat-nav.component.scss";
+@import "./app/modules/upload/upload.component.scss";
+@import "./app/modules/video/video.component.scss";
+
+[hidden] {
+  display: none !important; 
+}
