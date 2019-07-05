@@ -18,10 +18,6 @@ The app will automatically reload if you change any of the source files.
 The example application is a video service.
 
 ## General functionality:
-1. Authenticate users via JWT
-2. CRUD users 
-3. CRUD Products
-4. CR*D Comments on products
-5. Admin dashboard
-6. Role based
+1. Upload video file(-s)
+2. Capture camera
 
